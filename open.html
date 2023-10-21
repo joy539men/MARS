@@ -6,28 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        html {
+            height: 100%;
         }
 
-        /* body {
-            background-image: url(./imges/open_image.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-            
-        } */
         body {
-            /* background: repeating-conic-gradient(rgb(97, 44, 221) 0,
-                    rgb(26, 114, 230) 15deg,
-                    rgb(123, 187, 216) 15deg,
-                    rgb(69, 72, 116) 30deg);
-            background-repeat: no-repeat;
-            background-size: cover; */
             background-image: url(./imges/bgc3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
         }
 
         .box,
@@ -39,18 +27,25 @@
             color: rgb(234, 11, 78);
         }
 
-        .rwdtxt {
-            box-sizing: border-box;
-            position: relative;
-            top: 28vh;
-            margin-left: 15%;
-        }
-
         .rwdtxt1 {
             box-sizing: border-box;
             position: relative;
             top: 20vh;
-            margin-left:  58%;
+            text-align: left;
+            margin-left: 30px;
+        }
+
+        .rwdtxt {
+            box-sizing: border-box;
+            position: relative;
+            top: 30vh;
+            text-align: right;
+            margin-right: 30px;
+        }
+
+        .image {
+            width: 80px;
+            height: 80px;
         }
 
         .box:hover,
@@ -67,6 +62,11 @@
                 font-size: 40px;
                 color: rgb(61, 236, 55);
             }
+
+            .image {
+                width: 35px;
+                height: 35px;
+            }
         }
 
         @media (min-width: 768px) and (max-width: 1200px) {
@@ -75,6 +75,11 @@
             .rwdtxt1 {
                 font-size: 60px;
                 color: rgb(233, 148, 22);
+            }
+
+            .image {
+                width: 50px;
+                height: 50px;
             }
         }
 
@@ -91,30 +96,24 @@
 </head>
 
 <body>
-
     <div class="rwdtxt1">
         <a href="http://127.0.0.1:5500/index.html" style="text-decoration: none;">
-            <img src="./imges/badminton.png" style="width: 90px;height: 90px;" >
+            <img src="./imges/badminton.png" class="image">
             <div class="box"><span>認</span></div>
             <div class="box"><span>識</span></div>
             <div class="box"><span>羽</span></div>
             <div class="box"><span>球</span></div>
         </a>
     </div>
-
-
-
     <div class="rwdtxt">
         <a href="#" style="text-decoration: none;">
-            <img src="./imges/badminton (3).png" style="width: 80px;height: 80px;" >
+            <img src="./imges/badminton (3).png" class="image">
             <div class="market"><span>進</span></div>
             <div class="market"><span>入</span></div>
             <div class="market"><span>賣</span></div>
             <div class="market"><span>場</span></div>
         </a>
     </div>
-
-
 </body>
 
 </html>
