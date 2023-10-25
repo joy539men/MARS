@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#tabs {
+    width: 550px;
+    margin: auto;
+}
+#fragment-1, #fragment-2{
+    /* background-color:rgb(168, 176, 242) ; */
+    padding-top: 90px;
+    text-align: center;
+}
+/* 登入註冊input */
+#fragment-1 input, #fragment-2 input {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#fragment-1 input:hover, #fragment-2 input:hover {
+    background-color:rgba(152, 162, 239, 0.186) ;
+}
+#inPhone:invalid {
+    background-color:#ea9898c2 ;
+}
+/* button */
+.loginBtn {
+    font-size: larger;
+    padding: 30px 0px;
+    font-style: italic;
+}
+.loginBtn button {
+        padding: 5px 10px;
+        border-radius: 5px;
+}
+.loginBtn button:hover{
+    background-color: rgb(148, 72, 220);
+    color: aliceblue;
+}
+/* main */
+.main {
+    background-color: rgb(233, 230, 227);
+    padding: 30px 0px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.9.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="../_css/bootstrap.css">
+  <link rel="stylesheet" href="../_js/bootstrap.bundle.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex  mb-2 mb-lg-0 text-dark text-decoration-none fs-2">MARS Store
+        </a>
+        <ul class="nav col-6 col-lg-auto ms-lg-auto d-flex align-items-center mb-md-0">
+          <li><a href="#" class="nav-link px-4 pb-4 link-secondary"><i class="bi bi-house-fill"
+                style="font-size: 3rem;"></i></a></li>
+          <li><a href="#" class="nav-link px-2 fs-4 link-dark">商品</a></li>
+          <li><a href="#" class="nav-link px-2 fs-4 link-dark">門市據點</a></li>
+          <li><a href="#" class="nav-link px-2 fs-4 link-dark">聯絡我們</a></li>
+        </ul>
+        <form class="col-6 col-lg-auto mb-3 mx-5 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="main">
+    <div id="tabs">
+      <ul>
+        <li><a href="#fragment-1"><span>登入</span></a></li>
+        <li><a href="#fragment-2"><span>註冊</span></a></li>
+      </ul>
+      <div id="fragment-1">
+        <h1>會員登入</h1>
+        <br><br>
+        <p><input type="text" name="account" id="login" placeholder="輸入帳號/手機號碼/電子郵件"></p>
+        <p><input type="password" name="account" id="loginPass" placeholder="輸入密碼"></p>
+        <div class="loginBtn">
+          <button id="btnLogin" class="d-flex ms-auto">登入</button>
+        </div>
+      </div>
+      <div id="fragment-2">
+        <h1>註冊會員</h1>
+        <br><br>
+        <p><input type="text" id="inName" placeholder="請輸入姓名"></p>
+        <p><input type="phone" id="inPhone" placeholder="請輸入手機號碼" pattern="[0-9]{10}"></p>
+        <p><input type="eamil" id="inEmail" placeholder="請輸入電子郵件"></p>
+        <p><input type="password" id="inPass1" placeholder="請輸入密碼"></p>
+        <p><input type="password" id="inPass2" placeholder="確認密碼"></p>
+        <div class="loginBtn">
+          <button id="btnLogin" class="d-flex ms-auto">註冊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-3 col-md-2 mb-3">
+          <h5>認識MARS Store</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">關於我們</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">品牌合作</a></li>
+          </ul>
+        </div>
+
+        <div class="col-3 col-md-2 mb-3">
+          <h5>顧客權益</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">聯絡我們</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Q&A</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">退換貨須知</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+          </ul>
+        </div>
+        <div class=" col-3 col-md-5 offset-md-1 mb-3">
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#">123</a></li>
+            <li class="ms-3"><a class="link-dark" href="#">123</a></li>
+            <li class="ms-3"><a class="link-dark" href="#">123</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="col-3 col-md-2 mb-3 border">
+          <h5>門市據點</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">連絡電話:04-23265860</li>
+            <li class="nav-item mb-2">店址:408台中市南屯區公益路二段51號18樓</li>
+            <li class="nav-item mb-2">營業時間: AM 08:30 ~ PM 05:30</li>
+          </ul>
+        </div>
+        <div class="col-3 col-md-2 mb-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6019329422497!2d120.6490937047396!3d24.15061390173774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9650422ae1%3A0x334dfd5796c49ff6!2z6LOH5bGV5ZyL6ZqbLeWOnyDos4fnrZbmnIMt5pW45L2N5pWZ6IKy56CU56m25omALeS4reWNgA!5e0!3m2!1szh-TW!2stw!4v1698221081240!5m2!1szh-TW!2stw"
+            width="380" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+
+       
+
+      <div class="py-4 text-center border-top">
+        <p>Copyright &copy; 2023 MARS.Store</p>
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="./demo.js"></script>
+</body>
+
+</html>
