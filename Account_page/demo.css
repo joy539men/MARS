@@ -30,6 +30,28 @@
 #inPhone:invalid {
     background-color: #ea9898c2;
 }
+#logoTop {
+    margin-top: 50px;
+}
+
+#rightList {
+    margin-top: 50px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(233, 199, 9);
+}
+
+#topTop a {
+    display: inline-block;
+    text-decoration: none;
+}
 
 /* 登入、註冊 button */
 #btnLogin1,

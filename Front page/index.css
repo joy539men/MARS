@@ -1,35 +1,4 @@
-/* .inner {
-    background: linear-gradient(to right, rgb(192, 255, 200), white);
-    height: 87.5px;
-    width: 375.2px;
-    float: left;
-} */
-/* body {
-    font-family:'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', sans-serif;
-    } */
-
-h1 {
-    width: 80%;
-    background-color: rgb(243, 241, 240);
-    border-radius : 50px / 100px;
-    display: block;
-    margin: auto;
-}
-.accordion {
-    margin: auto;
-}
-
-.accordion img {
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-}
-
-.accordion-item button {
-    background-color: rgba(159, 214, 245, 0.637);
-}
-
-.top a {
+/* .top a {
     text-decoration: none;
     font-size: 30px;
 }
@@ -97,7 +66,62 @@ h1 {
 
 .dropdown:hover .dropdown-content {
     display: block;
+} */
+
+#logoTop {
+    margin-top: 50px;
 }
+
+#rightList {
+    margin-top: 50px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(233, 199, 9);
+}
+
+
+
+#topTop a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* 標題 : 認識羽球 */
+#title {
+    width: 450px;
+    background-color: rgb(245, 221, 209);
+    border-radius: 200px / 100px;
+    margin: 30px auto;
+    text-align: center;
+
+}
+
+#bdbgc {
+    background-color: rgb(243, 241, 240);
+}
+
+.accordion {
+    margin: auto;
+}
+
+.accordion img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.accordion-item button {
+    background-color: rgba(159, 214, 245, 0.637);
+}
+
+/* 標題 : 運動員介紹 */
 .pic {
     position: relative;
     width: 350px;
@@ -128,10 +152,10 @@ h1 {
     padding: 5px;
     font-size: large;
     border-radius: 10px;
-    background-color: #0a0a23;
+    background-color: #5252be;
     color: #fff;
     border: none;
-    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 10px #5252be;
     margin-bottom: 15px;
 }
 
@@ -139,26 +163,26 @@ h1 {
     background-color: #eb0909;
     color: #ffffff;
     border: none;
-    box-shadow: 0px 0px 10px 10px #df3a34;
+    box-shadow: 0px 0px 10px 10px #eb0909;
 }
 
 .View button:active {
     background-color: #200ae7;
     color: #ffffff;
-    box-shadow: 0px 0px 10px 10px #200ae7e3;
+    box-shadow: 0px 0px 10px 10px #200ae7;
 }
 
 .View p {
-    color: #000000;
-    font-size: 55px;
-    font-weight:900 ;
+    color: #f31313;
+    font-size: 50px;
+    font-weight: 900;
 }
 
 .View:hover {
 
     opacity: 1;
     transition: 1s;
-    background-color: #b9b0b08c;
+    background-color: #9d9d9e80;
     border-radius: 10px;
 }
 
@@ -166,9 +190,9 @@ h1 {
     background-image: url(../imges/bg_Image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    }
+}
 
-.upArrow {
+#upArrow {
     background-image: url(../imges/up-arrow.png);
     background-size: contain;
     position: fixed;
@@ -176,4 +200,57 @@ h1 {
     bottom: 45px;
     width: 50px;
     height: 50px;
+    background-color: #5c4edd9f;
+    border-radius: 50%;
+}
+
+/* icon hover效果 */
+#rightList1:hover::after,
+#IG:hover::after,
+#FB:hover::after,
+#Line:hover::after,
+#YT:hover::after {
+    position: absolute;
+    color: #ffffff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#upArrow:hover::after {
+    position: absolute;
+    color: #ffffff;
+    top: -40px;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '到最上層';
+    width: 70px;
+}
+
+
+#rightList1:hover::after {
+    content: '會員登入';
+    }
+
+#IG:hover::after {
+    content: 'Instagram';
+    margin-left: 15px;
+}
+
+#FB:hover::after {
+    content: 'Facebook';
+    margin-left: 15px;
+}
+
+#Line:hover::after {
+    content: 'Line';
+    margin-left: 15px;
+}
+
+#YT:hover::after {
+    content: 'outube';
+    margin-left: 15px;
 }
