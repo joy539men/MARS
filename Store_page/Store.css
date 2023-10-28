@@ -1,0 +1,117 @@
+
+/* 導覽列 */
+#logoTop {
+    margin-top: 50px;
+}
+
+#rightList {
+    margin-top: 50px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(218, 144, 8);
+}
+
+#topTop a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#rightList1:hover::after {
+    position: absolute;
+    color: #ffffff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '會員登入';
+}
+
+/* 回最上層 */
+#upArrow {
+    background-image: url(../imges/up-arrow.png);
+    background-size: contain;
+    position: fixed;
+    right: 50px;
+    bottom: 45px;
+    width: 50px;
+    height: 50px;
+    background-color: #5c4edd9f;
+    border-radius: 50%;
+}
+
+/* 商品列表 */
+.main {
+    background-color: rgb(233, 230, 227);
+    padding-top: 10px;
+
+}.listItem {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.product h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size:18px;
+    line-height: 1.5;
+}
+
+.listItem button {
+    margin: 20px;
+}
+
+/* icon hover效果 */
+#IG:hover::after,
+#FB:hover::after,
+#Line:hover::after,
+#YT:hover::after {
+    position: absolute;
+    color: #ffffff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#upArrow:hover::after {
+    position: absolute;
+    color: #ffffff;
+    top: -40px;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '到最上層';
+    width: 70px;
+}
+
+#IG:hover::after {
+    content: 'Instagram';
+    margin-left: 15px;
+}
+
+#FB:hover::after {
+    content: 'Facebook';
+    margin-left: 15px;
+}
+
+#Line:hover::after {
+    content: 'Line';
+    margin-left: 15px;
+}
+
+#YT:hover::after {
+    content: 'outube';
+    margin-left: 15px;
+}

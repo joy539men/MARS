@@ -68,6 +68,7 @@
     display: block;
 } */
 
+/* 導覽列 */
 #logoTop {
     margin-top: 50px;
 }
@@ -83,14 +84,22 @@
 }
 
 #rightList a:hover {
-    color: rgb(233, 199, 9);
+    color: rgb(218, 144, 8);
 }
-
-
 
 #topTop a {
     display: inline-block;
     text-decoration: none;
+}
+
+#rightList1:hover::after {
+    position: absolute;
+    color: #ffffff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '會員登入';
 }
 
 /* 標題 : 認識羽球 */
@@ -191,7 +200,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+/* 回最上層 */
 #upArrow {
     background-image: url(../imges/up-arrow.png);
     background-size: contain;
@@ -204,8 +213,7 @@
     border-radius: 50%;
 }
 
-/* icon hover效果 */
-#rightList1:hover::after,
+/* footer icon hover效果 */
 #IG:hover::after,
 #FB:hover::after,
 #Line:hover::after,
@@ -229,11 +237,6 @@
     content: '到最上層';
     width: 70px;
 }
-
-
-#rightList1:hover::after {
-    content: '會員登入';
-    }
 
 #IG:hover::after {
     content: 'Instagram';
