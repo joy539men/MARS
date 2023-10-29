@@ -1,16 +1,20 @@
-
 /* 導覽列 */
+#topTop {
+    background-color: rgb(214, 199, 235);
+}
 #logoTop {
     margin-top: 50px;
+    padding-left: 100px;
 }
 
 #rightList {
-    margin-top: 50px;
+    margin-top: 40px;
+    padding-right: 40px;
 }
 
 #rightList a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     color: #0a0a23;
 }
 
@@ -33,6 +37,31 @@
     content: '會員登入';
 }
 
+/* 購物車圖示效果 */
+
+#cartCount {
+    background-color: rgba(255, 0, 0, 0.986);
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border-radius: 40%;
+    position: absolute;
+    margin-left: 30px;
+    color: aliceblue;
+}
+
+#cartPopup {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 400px;
+    background: #fff;
+    z-index: 999;
+    top: 85px;
+    right: 170px;
+    display: none;
+}
+
 /* 回最上層 */
 #upArrow {
     background-image: url(../imges/up-arrow.png);
@@ -50,8 +79,10 @@
 .main {
     background-color: rgb(233, 230, 227);
     padding-top: 10px;
+    margin-top: 90px;
+}
 
-}.listItem {
+.listItem {
     list-style-type: none;
     padding-left: 0;
     padding-right: 0;
@@ -63,7 +94,7 @@
     margin-top: 10px;
     margin-bottom: 0;
     font-weight: bolder;
-    font-size:18px;
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -92,7 +123,7 @@
     background: #346e7a;
     padding: 5px;
     border-radius: 5px;
-    content: '到最上層';
+    content: '回最上層';
     width: 70px;
 }
 
