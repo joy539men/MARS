@@ -1,4 +1,4 @@
-// 商品照片 標題內容
+// 商品照片、標題內容、價格
 $(document).ready(function () {
     var imageInfo = [
         {
@@ -8,7 +8,7 @@ $(document).ready(function () {
         },
         {
             imageSrc: '../imges/prd_image_2/突擊 TK-TTY A.jpg',
-            title: '突擊 TK-TTY',
+            title: '突擊 TK-TTY A',
             price: '售價 NT 5,656',
         }
     ];
@@ -35,6 +35,7 @@ $(document).ready(function () {
             $(this).attr('src', newImagesrc);
         });
     })
-
-
 });
+
+
+
