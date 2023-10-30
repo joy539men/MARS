@@ -31,7 +31,10 @@
                     </svg>
                 </div>
                 <div id="cartPopup">
-                    <p>购物车内容...</p>
+                    <p>購物車内容...</p>
+                    <ul id="cartItemlist">
+
+                    </ul>
                 </div>
                 <div id="rightList1" class="col-1"><a href="../Account_page/Account.html"><img src="../imges/login.png"
                             style="width: 50px;height: 50px;"></a></div>
@@ -46,24 +49,7 @@
                     <h3></h3>
                     <p></p>
                     <label for="buyCount1">購買數量</label>
-                    <select name="count" id="buyCount1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <div>
-                        <a href=""><button type="button" class="btn btn-outline-success">直接購買</button></a>
-                        <button type="button" id="addCart" class="btn btn-outline-success ">加入購物車</button>
-                    </div>
-                </li>
-                <li class="col product">
-                    <div><img width="100%" class="prdPic"></div>
-                    <h3></h3>
-                    <p></p>
-                    <label for="buyCount2">購買數量</label>
-                    <select name="count" id="buyCount2">
+                    <select name="count" class="product-quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -72,7 +58,24 @@
                     </select>
                     <div>
                         <button type="button" class="btn btn-outline-success">直接購買</button>
-                        <button type="button" class="btn btn-outline-success">加入購物車</button>
+                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-F HS C">加入購物車</button>
+                    </div>
+                </li>
+                <li class="col product">
+                    <div><img width="100%" class="prdPic"></div>
+                    <h3></h3>
+                    <p></p>
+                    <label for="buyCount2">購買數量</label>
+                    <select name="count" class="product-quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <div>
+                        <button type="button" class="btn btn-outline-success">直接購買</button>
+                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-TTY A">加入購物車</button>
                     </div>
                 </li>
                 <!-- <li class="col">A third item</li>
