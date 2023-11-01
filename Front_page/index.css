@@ -54,7 +54,7 @@
 #cartPopup {
     position: absolute;
     border: 1px solid #ccc;
-    width: 400px;
+    width: auto;
     background: #fff;
     z-index: 999;
     top: 85px;
