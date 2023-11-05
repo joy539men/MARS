@@ -53,13 +53,26 @@
 
 #cartPopup {
     position: absolute;
-    border: 1px solid #ccc;
     width: auto;
-    background: #fff;
+    background: #ebd6d600;
     z-index: 999;
     top: 85px;
     right: 170px;
     display: none;
+}
+
+.cartpop th {
+    border: 3px solid;
+    width: 300px;
+    text-align: center;
+   font-size: 20px;
+   padding: 10px;
+   background-color: #9aced8;
+}
+
+.cartpop td {
+    background-color: rgb(204, 233, 223);
+    
 }
 
 /* 回最上層 */

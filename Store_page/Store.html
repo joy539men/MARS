@@ -31,11 +31,14 @@
                     </svg>
                 </div>
                 <div id="cartPopup">
-                    <p>購物車内容...</p>
-                    <ul id="cartItemlist">
-
-                    </ul>
-                    <button>前往結帳</button>
+                    <table class="cartpop ">
+                        <tr>
+                            <th>商品名稱</th>
+                            <th>單價</th>
+                            <th>數量</th>
+                            <th></th>
+                        </tr>
+                    </table>
                 </div>
                 <div id="rightList1" class="col-1"><a href="../Account_page/Account.html"><img src="../imges/login.png"
                             style="width: 50px;height: 50px;"></a></div>
@@ -48,9 +51,10 @@
                 <li class="col product">
                     <div><img width="100%" class="prdPic"></div>
                     <h3></h3>
-                    <span>售價 NT</span> <p style="display: inline-block;" class="mt-3"></p><br>
+                    <span>售價 NT</span>
+                    <p style="display: inline-block;" class="mt-3"></p><br>
                     <label for="buyCount1">購買數量</label>
-                    <select name="count" id="buyCount1" class="product-quantity">
+                    <select name="count" id="buyCount1" class="quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -58,15 +62,16 @@
                         <option>5</option>
                     </select>
                     <div>
-                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-F HS C">加入購物車</button>
+                        <button type="button" class="btn btn-outline-success addCart">加入購物車</button>
                     </div>
                 </li>
                 <li class="col product">
                     <div><img width="100%" class="prdPic"></div>
                     <h3></h3>
-                    <span>售價 NT</span> <p style="display: inline-block;" class="mt-3"></p><br>
+                    <span>售價 NT</span>
+                    <p style="display: inline-block;" class="mt-3"></p><br>
                     <label for="buyCount2">購買數量</label>
-                    <select name="count" id="buyCount2" class="product-quantity">
+                    <select name="count" id="buyCount2" class="quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -74,15 +79,16 @@
                         <option>5</option>
                     </select>
                     <div>
-                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-TTY A">加入購物車</button>
+                        <button type="button" class="btn btn-outline-success addCart">加入購物車</button>
                     </div>
                 </li>
                 <li class="col product">
                     <div><img width="100%" class="prdPic"></div>
                     <h3></h3>
-                    <span>售價 NT</span> <p style="display: inline-block;" class="mt-3 data-price"></p><br>
+                    <span>售價 NT</span>
+                    <p style="display: inline-block;" class="mt-3 data-price"></p><br>
                     <label for="buyCount3">購買數量</label>
-                    <select name="count" id="buyCount3" class="product-quantity">
+                    <select name="count" id="buyCount3" class="quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -90,15 +96,16 @@
                         <option>5</option>
                     </select>
                     <div>
-                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-TTY A">加入購物車</button>
+                        <button type="button" class="btn btn-outline-success addCart">加入購物車</button>
                     </div>
                 </li>
                 <li class="col product">
                     <div><img width="100%" class="prdPic"></div>
                     <h3></h3>
-                    <span>售價 NT</span> <p style="display: inline-block;" class="mt-3"></p><br>
+                    <span>售價 NT</span>
+                    <p style="display: inline-block;" class="mt-3"></p><br>
                     <label for="buyCount3">購買數量</label>
-                    <select name="count" id="buyCount3" class="product-quantity">
+                    <select name="count" id="buyCount3" class="quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -106,7 +113,8 @@
                         <option>5</option>
                     </select>
                     <div>
-                        <button type="button" class="btn btn-outline-success addCart" data-group="突擊 TK-TTY A">加入購物車</button>
+                        <button type="button" class="btn btn-outline-success addCart"
+                            data-group="突擊 TK-TTY A">加入購物車</button>
                     </div>
                 </li>
             </ul>
@@ -178,7 +186,7 @@
         </a>
     </div>
     <script src="./Store.js"></script>
-    <script src="../Navbar.js"></script>
+    <!-- <script src="../Navbar.js"></script> -->
 </body>
 
 </html>
