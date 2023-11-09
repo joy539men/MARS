@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.box {
+    width: 1200px;
+    margin: 30px auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.box>.top {
+    height: 40px;
+    background-color: rgb(214, 199, 235);
+}
+
+.box>ul {
+    padding: 20px;
+}
+
+.box>.bottom {
+    height: 80px;
+    background-color: rgb(214, 199, 235);
+    overflow: hidden;
+}
+
+.box>.bottom>p {
+    line-height: 80px;
+    margin-left: 20px;
+    margin-right: 25px;
+    font-size: 30px;
+    float: right;
+}
+
+.box>.bottom>button {
+    float: right;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: larger;
+    padding: 5px;
+}
+
+.box>ul>li {
+    height: 100px;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+.box>ul>li>.select {
+    float: left;
+    width: 100px;
+    border-right: 1px solid #333;
+    height: 100%;
+    position: relative;
+}
+
+.box>ul>li>.select>input {
+    width: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.box>ul>li>.img {
+    width: 100px;
+    padding: 0 10px;
+    float: left;
+}
+
+.box>ul>li>.desc {
+    width: 200px;
+    float: left;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+
+.box>ul>li>.price,
+.box>ul>li>.subtotal {
+    float: left;
+    width: 200px;
+    line-height: 100px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-left: 40px;
+}
+
+.box>ul>li>.number {
+    float: left;
+    width: 100px;
+    padding-top: 35px;
+    margin-left: 35px;
+}
+
+.box>ul>li>.number>input,
+.box>ul>li>.number>button {
+    width: 30px;
+    height: 30px;
+}
+
+.box>ul>li>.number>input {
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.box>ul>li>.del {
+    float: left;
+    padding-top: 35px;
+    margin-left: 30px;
+}
+
+.box>ul>li>.del>button {
+    height: 30px;
+    padding: 5px;
+}
+
+.cartImage > img {
+    width: 250px;
+    display: inline-block;
+}
+
+.cartImage > div {
+    display: inline-block;
+    font-size: 60px;
+    position: absolute;
+    margin: 100px 25px;
+}
