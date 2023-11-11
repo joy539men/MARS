@@ -3,21 +3,24 @@ var cart = JSON.parse(window.localStorage.getItem('cart')) || [];
 
 // 獲取元素
 var cartList = document.querySelector('.box > ul');
-
+var all = document.getElementById('all');
+var delItem = document.querySelector('.del-item');
+var totalCount = document.getElementById('totalCount');
+var totalPrice = document.getElementById('totalPrice');
 // 判斷陣列裡面有沒有數據
 if (!cart.length) {
     cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
 } else {
-    function inti(){
-        var total = 0;
-        var totalprice = 0;
-        var li_innerHTML ='';
-        cart.forEach(function (item,index) {
+    function inti() {
+        var count = 0;
+        var sum = 0
+        var li_innerHTML = '';
+        cart.forEach(function (item, index) {
             var item_price = toThousands(item.price)
             var subtotal_price = toThousands(item.price * item.cartNumber)
             li_innerHTML += `<li>
             <div class="select">
-                <input type="checkbox" data-id="${index}" class="select-item" ${item.isSelect?"checked":""}/>
+                <input type="checkbox" id="${index}" class="select-item" ${item.isSelect ? "checked" : ""}/>
             </div>
             <div class="img">
                 <img src="${item.imageSrc}">
@@ -27,64 +30,85 @@ if (!cart.length) {
                 單價 : $ ${item_price} 元
             </div>
             <div class="number">
-                <button data-id="${item.id}" class="sub" ${item.cartNumber == 1 && 'disabled'}>-</button>
-                <input type="text" value="${item.cartNumber}">
-                <button>+</button>
+                <button class="reduce" id="${index}" ${item.cartNumber == 1 && 'disabled'}>-</button>
+                <input type="text"  value="${item.cartNumber}">
+                <button class="add" id="${index}">+</button>
             </div>
              <div class="subtotal">
-                小計 $ ${subtotal_price } 元
+                小計 $ ${subtotal_price} 元
             </div>
             <div class="del">
                 <button>刪除</button>
             </div></li>
             `
-            // 總計、總價
-            if(item.isSelect === true) {
-            total += item.cartNumber 
-            totalprice += item.cartNumber * item.price
+            if (item.isSelect) {
+                count++
+                sum += item.cartNumber * item.price
             }
-    });
-    cartList.innerHTML=li_innerHTML;
-    
-    var total_price = toThousands(totalprice)
-    var div = '';
-    div = `
-            <p>總價 : ${total_price}</p>
-            <button>去結算</button>
-            <button>清空購物車</button>
-            <button>繼續去購物</button>
-            <p>總計 : ${total}</p>
-            <input type="checkbox" id="all"><span>全選</span>
-        `
-    $('.bottom').html(div);
+            });
+        cartList.innerHTML = li_innerHTML;
+        totalCount.innerHTML = count;
+        totalPrice.innerHTML =  toThousands(sum);
+        all.checked = cart.length>0 && count === cart.length
+        window.localStorage.setItem('cart',JSON.stringify(cart))
+       
     }
     inti()
 
-    // 判斷時選擇按鈕
-        var box = document.querySelector('.box')
-     box.addEventListener('click',function(e){
-        if (e.target.className === 'select-item'){
-            cart[e.target.dataset.id].isSelect = !cart[e.target.dataset.id].isSelect 
+    // box事件委託
+    var box = document.querySelector('.box')
+    box.addEventListener('click', function (e) {
+        // 數量增加
+        if (e.target.className == 'add') {
+            cart[e.target.id].cartNumber++;
             inti()
+        }
+        // 數量減少
+        if (e.target.className == 'reduce') {
+            cart[e.target.id].cartNumber--;
+            inti()
+        }
+        // 複選框
+        if (e.target.className == 'select-item') {
+            cart[e.target.id].isSelect = !cart[e.target.id].isSelect
+            inti()
+        }
+        // if(e.target.className == 'del'){
+        //     var flag = confirm('確定要刪除商品嗎?')
+        //     if (flag) {
+        //         $(this).parent().remove()
+        //         console.log($(this).parent());
+        //         inti()
+        //     }
+        // }
+        // 刪除按鈕 綁定一個 click 事件
+        // $('.del').on('click', function () {
+        //     var flag = confirm('確定要刪除商品嗎?')
+        //     if (flag) {
+        //         $(this).parent().remove()
+        //         inti()
+        //     }
+        // })
+    })
+    // 全選框
+    all.addEventListener('click', function () {
+        cart.forEach(function (item) {
+            item.isSelect = all.checked
+        })
+        inti()
+    })
+    // 刪除所選商品
+    delItem.addEventListener('click',function(){
+        var flag = confirm('確定要刪除商品嗎?')
+        if(flag){
+             cart = cart.filter(function(ele,index){
+            return !ele.isSelect
+        })
+        inti()
         }
     })
 
-    // 判斷是否全選
-    var selectAll = cart.every(function(item){return item.isSelect})
-    if (selectAll){
-        $('#all').prop('checked',true)
-    }
-    // 全選按鈕
-    var all = document.getElementById('all')
-    $('#all').on('click',function(){
-        cart.forEach(function(){
-            $('.select input').prop('checked',all.checked)
-        })
-    })
-    
-    
 
-   
     function toThousands(num) {
         var num = (num || 0).toString(), result = '';
         while (num.length > 3) {
@@ -95,10 +119,4 @@ if (!cart.length) {
         return result;
     }
 }
-// 刪除按鈕 綁定一個 click 事件
-$('.del').on('click',function(){
-    var flag = confirm('確定要刪除商品嗎?')
-    if (flag) {
-        $(this).parent().remove()
-    }
-})
+
