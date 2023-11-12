@@ -5,7 +5,7 @@ var data = [
         title: '突擊 TK-F HS C',
         price: 8787,
         cartNumber : 0,
-        isSelect : true,
+        isSelect : false,
     },
     {
         prdId : 2,

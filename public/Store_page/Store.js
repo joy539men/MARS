@@ -41,7 +41,7 @@ data.forEach(function (item) {
     li.innerHTML = `
     <div class="img"><img src="${item.imageSrc}"></div>
     <p>${item.title}</p>
-    <div>售價:NT ${item.price} 元</div>
+    <div>售價:NT ${toThousands(item.price)} 元</div>
   `
     // 創建一個 button 按鈕 加入購物車
     var btn = document.createElement('button');
@@ -50,12 +50,25 @@ data.forEach(function (item) {
     btn.setAttribute('btnid', item.prdId);
     btn.onclick = addCart;
     li.appendChild(btn);
-
+    
     // 插入到 frg 裡面
     frg.appendChild(li)
 })
 // 插入到 ul 裡面
 listBox.appendChild(frg);
+
+
+
+// 千分位逗號
+function toThousands(num) {
+    var num = (num || 0).toString(), result = '';
+    while (num.length > 3) {
+        result = ',' + num.slice(-3) + result;
+        num = num.slice(0, num.length - 3);
+    }
+    if (num) { result = num + result; }
+    return result;
+}
 
 
 // 加入購物車功能
@@ -84,6 +97,33 @@ function addCart() {
             list.push(addPrd)
         }
     }
+
+    var cartcount = 1
+    var cartCount = document.querySelector('#cartCount')
+    var cartsum= cartcount ++
+    console.log(cartsum);
+    cartCount.innerHTML = cartsum
+
     // 組裝好的數據存起來
-    window.localStorage.setItem('cart',JSON.stringify(list))
+    window.localStorage.setItem('cart', JSON.stringify(list))
 }
+
+const login = document.querySelector('#login')
+const logout = document.querySelector('#rightList1')
+function render() {
+    const uname = localStorage.getItem('myUname')
+    // console.log(uname);
+    if (uname) {
+        login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}</a>`
+        logout.innerHTML = `<a href="javascript:;"><a href=""><img src="../imges/logout.png"
+                            style="width: 40px;height: 40px;padding-bottom:px">登出</a>`
+    }else{
+        login.innerHTML = `<a href="../Account_page/Account.html"><img src="../imges/login.png" style="width: 30px;height: 30px;">登入/註冊</a>`
+    }
+}
+render()
+
+logout.addEventListener('click',function(){
+    localStorage.removeItem('myUname')
+    render()
+})

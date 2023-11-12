@@ -1,15 +1,16 @@
 /* 導覽列 */
 #topTop {
-    background-color: rgb(214, 199, 235);
-}
-#logoTop {
-    margin-top: 50px;
-    padding-left: 100px;
+    background-color: rgb(235, 228, 243);
 }
 
 #rightList {
-    margin-top: 40px;
-    padding-right: 40px;
+    padding-top: 40px;
+}
+
+#logoTop>a>img {
+    height:100px;
+    padding-top: 0px;
+    padding-left: 90px;
 }
 
 #rightList a {

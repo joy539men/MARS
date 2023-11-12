@@ -1,3 +1,32 @@
+/* 導覽列 */
+#topTop {
+    background-color: rgb(235, 228, 243);
+}
+
+#rightList {
+    padding-top: 40px;
+}
+
+#logoTop>a>img {
+    height:100px;
+    padding-top: 0px;
+    padding-left: 90px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(218, 144, 8);
+}
+
+#topTop a {
+    display: inline-block;
+    text-decoration: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +48,7 @@ img {
     margin: 30px auto;
     border: 1px solid #333;
     border-radius: 5px;
+    margin-top: 190px;
 }
 
 .box>.top {

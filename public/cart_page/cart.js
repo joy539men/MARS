@@ -12,6 +12,9 @@ if (!cart.length) {
     cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
 } else {
     function inti() {
+        // if (!cart.length) {
+        //     cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
+        // } else {
         var count = 0;
         var sum = 0
         var li_innerHTML = '';
@@ -45,13 +48,16 @@ if (!cart.length) {
                 count++
                 sum += item.cartNumber * item.price
             }
-            });
+        });
         cartList.innerHTML = li_innerHTML;
         totalCount.innerHTML = count;
-        totalPrice.innerHTML =  toThousands(sum);
-        all.checked = cart.length>0 && count === cart.length
-        window.localStorage.setItem('cart',JSON.stringify(cart))
-       
+        totalPrice.innerHTML = toThousands(sum);
+        all.checked = cart.length > 0 && count === cart.length
+        window.localStorage.setItem('cart', JSON.stringify(cart))
+        if (!cart.length) {
+            cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
+        }
+        // }
     }
     inti()
 
@@ -73,22 +79,7 @@ if (!cart.length) {
             cart[e.target.id].isSelect = !cart[e.target.id].isSelect
             inti()
         }
-        // if(e.target.className == 'del'){
-        //     var flag = confirm('確定要刪除商品嗎?')
-        //     if (flag) {
-        //         $(this).parent().remove()
-        //         console.log($(this).parent());
-        //         inti()
-        //     }
-        // }
-        // 刪除按鈕 綁定一個 click 事件
-        // $('.del').on('click', function () {
-        //     var flag = confirm('確定要刪除商品嗎?')
-        //     if (flag) {
-        //         $(this).parent().remove()
-        //         inti()
-        //     }
-        // })
+
     })
     // 全選框
     all.addEventListener('click', function () {
@@ -98,17 +89,24 @@ if (!cart.length) {
         inti()
     })
     // 刪除所選商品
-    delItem.addEventListener('click',function(){
-        var flag = confirm('確定要刪除商品嗎?')
-        if(flag){
-             cart = cart.filter(function(ele,index){
-            return !ele.isSelect
-        })
-        inti()
+    delItem.addEventListener('click', function () {
+        var res = cart.some(function (item) { return item.isSelect == true })
+        console.log(res);
+        if (res) {
+            console.log('ok');
+            var flag = confirm('確定要刪除商品嗎?')
+            if (flag) {
+                cart = cart.filter(function (ele, index) {
+                    return !ele.isSelect
+                })
+                inti()
+            }
+        } else {
+            alert('未選取商品')
         }
     })
 
-
+    // 千分位逗號
     function toThousands(num) {
         var num = (num || 0).toString(), result = '';
         while (num.length > 3) {
@@ -118,5 +116,5 @@ if (!cart.length) {
         if (num) { result = num + result; }
         return result;
     }
-}
 
+}

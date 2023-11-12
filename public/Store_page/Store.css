@@ -1,15 +1,16 @@
 /* 導覽列 */
 #topTop {
-    background-color: rgb(214, 199, 235);
-}
-#logoTop {
-    margin-top: 50px;
-    padding-left: 100px;
+    background-color: rgb(235, 228, 243);
 }
 
 #rightList {
-    margin-top: 40px;
-    padding-right: 40px;
+    padding-top: 40px;
+}
+
+#logoTop>a>img {
+    height:100px;
+    padding-top: 0px;
+    padding-left: 90px;
 }
 
 #rightList a {
@@ -27,7 +28,7 @@
     text-decoration: none;
 }
 
-#rightList1:hover::after {
+/* #rightList1:hover::after {
     position: absolute;
     color: #ffffff;
     font-size: .8em;
@@ -35,7 +36,7 @@
     padding: 5px;
     border-radius: 5px;
     content: '會員登出';
-}
+} */
 
 /* 購物車圖示效果 */
 
@@ -100,6 +101,7 @@ ul, li {
     width: 100%;
     height: 100%;
     display: block;
+    padding-top: 10px;
 }
 .container1 p{
     padding-top: 5px;
@@ -111,7 +113,7 @@ ul, li {
 .container1 div{
     text-align: center;
     display: block;
-    padding-top: 10px;
+    padding-top: 1px;
 }
 
 .container1 button{

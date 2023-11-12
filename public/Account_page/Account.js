@@ -21,3 +21,10 @@ function show_hide() {
         document.getElementById("comfirm_password").value="";
     }
 }
+const form = document.querySelector('form')
+const username = document.querySelector('[name=username]')
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+    localStorage.setItem('myUname',username.value)
+   location.href = '../Store_page/Store.html'
+})
