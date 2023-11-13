@@ -1,16 +1,16 @@
 /* 導覽列 */
 #topTop {
-  background-color: rgb(214, 199, 235);
-}
-
-#logoTop {
-  margin-top: 50px;
-  padding-left: 100px;
+  background-color: rgb(235, 228, 243);
 }
 
 #rightList {
-  margin-top: 40px;
-  padding-right: 40px;
+  padding-top: 40px;
+}
+
+#logoTop>a>img {
+  height:100px;
+  padding-top: 0px;
+  padding-left: 90px;
 }
 
 #rightList a {
@@ -52,22 +52,11 @@
   color: aliceblue;
 }
 
-#cartPopup {
-  position: absolute;
-  border: 1px solid #ccc;
-  width: auto;
-  background: #fff;
-  z-index: 999;
-  top: 85px;
-  right: 170px;
-  display: none;
-}
-
 /* main */
 .main {
   background-color: rgb(233, 230, 227);
   padding: 30px 0px;
-  height: 700px;
+  height: 650px;
 }
 
 /* 回最上層 */

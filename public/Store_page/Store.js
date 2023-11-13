@@ -50,14 +50,12 @@ data.forEach(function (item) {
     btn.setAttribute('btnid', item.prdId);
     btn.onclick = addCart;
     li.appendChild(btn);
-    
+
     // 插入到 frg 裡面
     frg.appendChild(li)
 })
 // 插入到 ul 裡面
 listBox.appendChild(frg);
-
-
 
 // 千分位逗號
 function toThousands(num) {
@@ -69,8 +67,11 @@ function toThousands(num) {
     if (num) { result = num + result; }
     return result;
 }
-
-
+// 按下加入購物車按鈕禁用
+// $('.container1>ul>li>button').on('click',function(){
+//     $(this).attr('disabled',true)
+// })
+// cartcount = 1
 // 加入購物車功能
 function addCart() {
     var addId = this.getAttribute('btnid');
@@ -97,16 +98,27 @@ function addCart() {
             list.push(addPrd)
         }
     }
-
-    var cartcount = 1
-    var cartCount = document.querySelector('#cartCount')
-    var cartsum= cartcount ++
-    console.log(cartsum);
-    cartCount.innerHTML = cartsum
+    // 購物車動態數量
+    showCount()
+    // var cartCount = document.querySelector('#cartCount')
+    // var cartsum = cartcount ++
+    // cartCount.innerHTML = cartsum
 
     // 組裝好的數據存起來
     window.localStorage.setItem('cart', JSON.stringify(list))
 }
+
+function showCount() {
+    var showCount = document.querySelector('#cartCount')
+    var show = 0
+    var list = JSON.parse(window.localStorage.getItem('cart'))
+    list.forEach(function (item) {
+        show += item.cartNumber
+        console.log(show)
+    })
+    showCount.innerHTML = show
+}
+showCount()
 
 const login = document.querySelector('#login')
 const logout = document.querySelector('#rightList1')
@@ -117,13 +129,14 @@ function render() {
         login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}</a>`
         logout.innerHTML = `<a href="javascript:;"><a href=""><img src="../imges/logout.png"
                             style="width: 40px;height: 40px;padding-bottom:px">登出</a>`
-    }else{
+    } else {
         login.innerHTML = `<a href="../Account_page/Account.html"><img src="../imges/login.png" style="width: 30px;height: 30px;">登入/註冊</a>`
     }
 }
 render()
 
-logout.addEventListener('click',function(){
+logout.addEventListener('click', function () {
     localStorage.removeItem('myUname')
     render()
 })
+

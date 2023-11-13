@@ -12,11 +12,9 @@ if (!cart.length) {
     cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
 } else {
     function inti() {
-        // if (!cart.length) {
-        //     cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
-        // } else {
         var count = 0;
         var sum = 0
+        
         var li_innerHTML = '';
         cart.forEach(function (item, index) {
             var item_price = toThousands(item.price)
@@ -44,6 +42,8 @@ if (!cart.length) {
                 <button>刪除</button>
             </div></li>
             `
+            
+
             if (item.isSelect) {
                 count++
                 sum += item.cartNumber * item.price
@@ -57,7 +57,6 @@ if (!cart.length) {
         if (!cart.length) {
             cartList.innerHTML = '<div class="cartImage"><img src="../imges/shopping-cart.png"><div>您還沒有添加商品，快去選購吧!</div></div>'
         }
-        // }
     }
     inti()
 
@@ -91,20 +90,36 @@ if (!cart.length) {
     // 刪除所選商品
     delItem.addEventListener('click', function () {
         var res = cart.some(function (item) { return item.isSelect == true })
-        console.log(res);
         if (res) {
-            console.log('ok');
-            var flag = confirm('確定要刪除商品嗎?')
-            if (flag) {
-                cart = cart.filter(function (ele, index) {
-                    return !ele.isSelect
-                })
-                inti()
-            }
+            showAlert1()
         } else {
-            alert('未選取商品')
-        }
+            showAlert2()
+        } 
     })
+    // 彈跳視窗函示
+    showAlert1 = () => {
+        Swal.fire({
+            icon: 'question',
+            title: '刪除商品',
+            text: '確定要刪除商品嗎?',
+        }).then((result) => {
+            console.log(result)
+            if(result.isConfirmed){
+                cart = cart.filter(function (ele, index) {
+                            return !ele.isSelect
+                        })
+                        inti()
+            }
+        })
+    }
+    
+    showAlert2 = () => {
+        Swal.fire({
+            icon: 'warning',
+            title: '未選取任何商品',
+            text: '請先選取想刪除的商品!',
+        })
+    }
 
     // 千分位逗號
     function toThousands(num) {
@@ -116,5 +131,6 @@ if (!cart.length) {
         if (num) { result = num + result; }
         return result;
     }
+
 
 }

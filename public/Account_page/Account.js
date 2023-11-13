@@ -26,5 +26,6 @@ const username = document.querySelector('[name=username]')
 form.addEventListener('submit',function(e){
     e.preventDefault()
     localStorage.setItem('myUname',username.value)
+    console.log(localStorage.getItem);
    location.href = '../Store_page/Store.html'
 })
