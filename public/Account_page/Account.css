@@ -1,16 +1,23 @@
 /* 導覽列 */
-#topTop {
-  background-color: rgb(235, 228, 243);
+header{
+  background-color: rgb(235, 228, 243) ;
 }
-
 #rightList {
-  padding-top: 40px;
+  margin-left: 780px;
+  padding-top: 75px;
+}
+#rightList div{
+  display: inline-block;
+  width: 110px;
 }
 
+#logoTop{
+  float: left;
+}
 #logoTop>a>img {
-  height:100px;
-  padding-top: 0px;
-  padding-left: 90px;
+  
+
+  padding-left: 50px;
 }
 
 #rightList a {
@@ -26,16 +33,6 @@
 #topTop a {
   display: inline-block;
   text-decoration: none;
-}
-
-#rightList1:hover::after {
-  position: absolute;
-  color: #ffffff;
-  font-size: .8em;
-  background: #346e7a;
-  padding: 5px;
-  border-radius: 5px;
-  content: '會員登入';
 }
 
 /* 購物車圖示效果 */

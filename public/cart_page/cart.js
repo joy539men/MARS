@@ -14,7 +14,7 @@ if (!cart.length) {
     function inti() {
         var count = 0;
         var sum = 0
-        
+        var allCount = 0
         var li_innerHTML = '';
         cart.forEach(function (item, index) {
             var item_price = toThousands(item.price)
@@ -38,20 +38,19 @@ if (!cart.length) {
              <div class="subtotal">
                 小計 $ ${subtotal_price} 元
             </div>
-            <div class="del">
-                <button>刪除</button>
-            </div></li>
             `
-            
-
             if (item.isSelect) {
-                count++
+                allCount += item.cartNumber
                 sum += item.cartNumber * item.price
+                count ++
             }
         });
         cartList.innerHTML = li_innerHTML;
-        totalCount.innerHTML = count;
+        // 總數量
+        totalCount.innerHTML = allCount;
+        // 總價
         totalPrice.innerHTML = toThousands(sum);
+
         all.checked = cart.length > 0 && count === cart.length
         window.localStorage.setItem('cart', JSON.stringify(cart))
         if (!cart.length) {

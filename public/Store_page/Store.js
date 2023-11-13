@@ -37,7 +37,7 @@ var frg = document.createDocumentFragment();
 data.forEach(function (item) {
     // 創建 li 渲染
     var li = document.createElement('li')
-    // li.setAttribute('class','col')
+
     li.innerHTML = `
     <div class="img"><img src="${item.imageSrc}"></div>
     <p>${item.title}</p>
@@ -67,11 +67,7 @@ function toThousands(num) {
     if (num) { result = num + result; }
     return result;
 }
-// 按下加入購物車按鈕禁用
-// $('.container1>ul>li>button').on('click',function(){
-//     $(this).attr('disabled',true)
-// })
-// cartcount = 1
+
 // 加入購物車功能
 function addCart() {
     var addId = this.getAttribute('btnid');
@@ -98,16 +94,11 @@ function addCart() {
             list.push(addPrd)
         }
     }
-    // 購物車動態數量
-    showCount()
-    // var cartCount = document.querySelector('#cartCount')
-    // var cartsum = cartcount ++
-    // cartCount.innerHTML = cartsum
-
     // 組裝好的數據存起來
     window.localStorage.setItem('cart', JSON.stringify(list))
+    showCount()
 }
-
+// 購物車動態數量
 function showCount() {
     var showCount = document.querySelector('#cartCount')
     var show = 0
@@ -126,9 +117,9 @@ function render() {
     const uname = localStorage.getItem('myUname')
     // console.log(uname);
     if (uname) {
-        login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}</a>`
-        logout.innerHTML = `<a href="javascript:;"><a href=""><img src="../imges/logout.png"
-                            style="width: 40px;height: 40px;padding-bottom:px">登出</a>`
+        login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}您好~</a>`
+        logout.innerHTML = `<a href="javascript:;"><a href="./Store.html"><img src="../imges/logout.png"
+                            style="width: 30px;height: 40px;padding-bottom:px">登出</a></a>`
     } else {
         login.innerHTML = `<a href="../Account_page/Account.html"><img src="../imges/login.png" style="width: 30px;height: 30px;">登入/註冊</a>`
     }
