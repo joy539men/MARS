@@ -1,22 +1,29 @@
-/* 導覽列 */
-header{
-    background-color: rgb(235, 228, 243) ;
+* {
+    font-family: 微軟正黑體;
 }
+
+/* 導覽列 */
+header {
+    background-color: rgb(235, 228, 243);
+}
+
 #rightList {
     margin-left: 780px;
     padding-top: 75px;
 }
-#rightList div{
+
+#rightList div {
     display: inline-block;
     width: 110px;
 }
 
-#logoTop{
+#logoTop {
     float: left;
 }
+
 #logoTop>a>img {
-    
-  
+
+
     padding-left: 50px;
 }
 
@@ -66,18 +73,33 @@ header{
 /* 標題 : 運動員介紹 */
 .pic {
     position: relative;
-    width: 350px;
-    height: 200px;
-    margin: 60px 50px 30px 60px;
+    /* width: 100%; */
+    /* height: 200px; */
+    margin: 90px 130px;
     display: flex;
+    border-radius: 10px;
+    background-color: rgba(166, 166, 218, 0.605);
+    /* right: -100px; */
+    /* top: 50%; */
+    transform: translateY(-50%);
+    transition: right 1s ease-in-out;
+    /* position: fixed; */
+}
+
+/* .animated-div {} */
+#pic-1 {
+    margin-top: 200px;
+}
+.pic>p {
+    padding: 20px;
 }
 
 .pic img {
     display: block;
-    width: 100%;
+    width: 250px;
     border-radius: 10px;
     box-shadow: 5px 6px 9px 6px rgba(0, 0, 0, 0.575);
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 
 .View {
@@ -124,7 +146,7 @@ header{
 
     opacity: 1;
     transition: 1s;
-    background-color: #baa0d480;
+    background-color: #a7a6a880;
     border-radius: 10px;
 }
 
@@ -133,6 +155,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 /* 回最上層 */
 #upArrow {
     background-image: url(../imges/up-arrow.png);
