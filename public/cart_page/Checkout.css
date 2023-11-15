@@ -1,0 +1,62 @@
+
+/* 導覽列 */
+header {
+    background-color: rgb(235, 228, 243);
+}
+
+#rightList {
+    margin-left: 780px;
+    padding-top: 75px;
+}
+
+#rightList div {
+    display: inline-block;
+    width: 110px;
+}
+
+#logoTop {
+    float: left;
+}
+
+#logoTop>a>img {
+
+
+    padding-left: 50px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(218, 144, 8);
+}
+
+
+#checked_list img {
+    width: 150px;
+   /* margin-left: 50px;
+   padding-top: 15px; */
+}
+
+#checked_prd,
+#checked_price,
+#checked_unmber,
+#checked_subtotal {
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.container th {
+    font-size: 25px;
+}
+
+#totalMoney {
+    font-size: 25px;
+}

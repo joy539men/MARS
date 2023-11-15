@@ -131,5 +131,9 @@ if (!cart.length) {
         return result;
     }
 
+    function checkout(){
+    location.href = '../cart_page/Checkout.html'
+}
+    
 
 }

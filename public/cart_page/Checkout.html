@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結帳Checkout</title>
+    <link href="../_css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_js/bootstrap.min.js">
+    <link rel="stylesheet" href="../jquery.js">
+    <link rel="stylesheet" href="Checkout.css">
 </head>
+
 <body>
-    
+    <header>
+        <div id="logoTop">
+            <a href="../Store_page/Store.html"><img src="../imges/store_logo.png"></a>
+        </div>
+        <div id="rightList">
+
+            <div><a href="../Front_page/index.html">認識羽球</a>/</div>
+            <div><a href="../Store_page/Store.html">購買商品</a>/</div>
+            <div><a href="../contact_us/contact_us.html">聯絡我們</a></div>
+        </div>
+
+    </header>
+    <section>
+        <div class="container">
+                    
+            <table class="table table-striped table-success">
+                <thead>
+                    <tr>
+                        <th>
+                            <p class="text-center">圖片</p>
+                        </th>
+                        <th>
+                            <p class="text-center">商品</p>
+                        </th>
+                        <th>
+                            <p class="text-center">價格</p>
+                        </th>
+                        <th>
+                            <p class="text-center">數量</p>
+                        </th>
+                        <th>
+                            <p class="text-center">小記</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="checked_list">
+
+                </tbody>
+            </table>
+            <table class="table table-striped table-success">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="text-end" id="totalMoney">總計</p>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="Checkout.js"></script>
 </body>
+
 </html>

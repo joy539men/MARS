@@ -20,8 +20,8 @@ $(document).ready(function () {
         ['../imges/shoes_image_6/A970TD C(1).jpg'],
         ['../imges/shoes_image_7/THUNDER+ A(1).jpg'],
         ['../imges/shoes_image_8/A391 C(1).jpg'],
-        ['../imges/shoes_image_9/P8500II D(1).png'],
-        ['../imges/shoes_image_10/A780 F(1).png'],
+        ['../imges/shoes_image_9/P8500II D(1).jpg'],
+        ['../imges/shoes_image_10/A780 F(1).jpg'],
     ];
 
     // 更換商品圖片效果
@@ -36,7 +36,27 @@ $(document).ready(function () {
         });
     })
 });
-
+// 登入/註冊文字轉換
+const login = document.querySelector('#login')
+const logout = document.querySelector('#rightList1')
+function render() {
+    const uname = localStorage.getItem('myUname')
+    // console.log(uname);
+    if (uname) {
+        login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}您好~</a>`
+        logout.innerHTML = `<a href="./Store.html"><img src="../imges/logout.png"
+                            style="width: 30px;height: 40px;padding-bottom:px">登出</a></a>`
+    } else {
+        login.innerHTML = `<a href="../Account_page/Account.html"><img src="../imges/login.png" style="width: 30px;height: 30px;">登入/註冊</a>`
+    }
+}
+render()
+// 登出清除localstorage資料
+logout.addEventListener('click', function () {
+    // localStorage.removeItem('myUname')
+    localStorage.clear()
+    render()
+})
 // 獲取元素 
 var listBox = document.querySelector('.container1 > ul');
 //console.log(listBox)
@@ -121,25 +141,5 @@ function showCount() {
 }
 showCount()
 
-const login = document.querySelector('#login')
-const logout = document.querySelector('#rightList1')
-function render() {
-    const uname = localStorage.getItem('myUname')
-    // console.log(uname);
-    if (uname) {
-        login.innerHTML = `<a href="javascript:;"><img src="../imges/login.png" style="width: 30px;height: 30px;">${uname}您好~</a>`
-        logout.innerHTML = `<a href="javascript:;"><a href="./Store.html"><img src="../imges/logout.png"
-                            style="width: 30px;height: 40px;padding-bottom:px">登出</a></a>`
-    } else {
-        login.innerHTML = `<a href="../Account_page/Account.html"><img src="../imges/login.png" style="width: 30px;height: 30px;">登入/註冊</a>`
-    }
-}
-render()
 
-logout.addEventListener('click', function () {
-    localStorage.removeItem('myUname')
-    localStorage.setItem('cart','[]')
-    addCart()
-    render()
-})
 
