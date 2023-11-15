@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS. Store</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(../imges/bgc3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .box,
+        .market {
+            transition: 0.3s;
+            display: inline-block;
+            font-style: italic;
+            text-shadow: rgb(221, 187, 48) 1px 0 10px;
+            color: rgb(234, 11, 78);
+        }
+
+        .rwdtxt1 {
+            box-sizing: border-box;
+            position: relative;
+            top: 20vh;
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .rwdtxt {
+            box-sizing: border-box;
+            position: relative;
+            top: 30vh;
+            text-align: right;
+            margin-right: 100px;
+        }
+
+        .image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .box:hover,
+        .market:hover {
+            transform: translateY(-50px);
+            color: rgb(11, 241, 210);
+        }
+
+
+        @media (max-width: 768px) {
+
+            .rwdtxt,
+            .rwdtxt1 {
+                font-size: 40px;
+                color: rgb(61, 236, 55);
+            }
+
+            .image {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+
+            .rwdtxt,
+            .rwdtxt1 {
+                font-size: 60px;
+                color: rgb(233, 148, 22);
+            }
+
+            .image {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            .rwdtxt,
+            .rwdtxt1 {
+                font-size: 90px;
+                color: rgb(235, 21, 21);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="rwdtxt1">
+        <a href="../Front_page/index.html" style="text-decoration: none;">
+            <img src="../imges/badminton.png" class="image">
+            <div class="box"><span>認</span></div>
+            <div class="box"><span>識</span></div>
+            <div class="box"><span>羽</span></div>
+            <div class="box"><span>球</span></div>
+        </a>
+    </div>
+    <div class="rwdtxt">
+        <a href="../Store_page/Store.html" style="text-decoration: none;">
+            <img src="../imges/badminton (3).png" class="image">
+            <div class="market"><span>進</span></div>
+            <div class="market"><span>入</span></div>
+            <div class="market"><span>賣</span></div>
+            <div class="market"><span>場</span></div>
+        </a>
+    </div>
+</body>
+
+</html>

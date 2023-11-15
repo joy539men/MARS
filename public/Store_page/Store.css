@@ -1,0 +1,168 @@
+/* 導覽列 */
+header{
+    background-color: rgba(235, 228, 243, 0.536) ;
+}
+#rightList {
+    margin-left: 780px;
+    padding-top: 75px;
+}
+#rightList div{
+    display: inline-block;
+    width: 110px;
+}
+
+#logoTop{
+    float: left;
+}
+#logoTop>a>img {
+    
+  
+    padding-left: 50px;
+}
+
+#rightList a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #0a0a23;
+}
+
+#rightList a:hover {
+    color: rgb(218, 144, 8);
+}
+
+#topTop a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* 購物車圖示效果 */
+
+#cartCount {
+    background-color: rgba(255, 0, 0, 0.986);
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border-radius: 40%;
+    position: absolute;
+    margin-left: 30px;
+    color: aliceblue;
+}
+
+/* 回最上層 */
+#upArrow {
+    background-image: url(../imges/up-arrow.png);
+    background-size: contain;
+    position: fixed;
+    right: 50px;
+    bottom: 45px;
+    width: 50px;
+    height: 50px;
+    background-color: #5c4edd9f;
+    border-radius: 50%;
+}
+
+/* 商品列表 */
+.main {
+    padding: 40px 20px 20px 0px ;
+    margin-top: 150px;
+}
+
+.container1{
+    width: 1200px;
+    margin: auto;
+}
+
+.container1 > ul {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.container1 > ul > li {
+    float: left;
+    width: calc(100% / 5 - 20px);
+    border: 1px solid rgb(214, 199, 235);
+    margin: 0 10px 20px;
+    height: 350px;
+    box-shadow: 5px 5px 10px rgb(214, 199, 235);
+    border-radius: 10px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container1 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 10px;
+}
+.container1 p{
+    padding-top: 5px;
+    text-align: center;
+    font-size: larger;
+    height: 65px;
+}
+
+.container1 div{
+    text-align: center;
+    display: block;
+    padding-top: 1px;
+}
+
+.container1 button{
+    margin: 20px 45px ;
+    border-radius: 10px;
+    width: 100px;
+}
+
+footer{
+    background-color: rgb(235, 228, 243);
+}
+
+/* icon hover效果 */
+#IG:hover::after,
+#FB:hover::after,
+#Line:hover::after,
+#YT:hover::after {
+    position: absolute;
+    color: #ffffff;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#upArrow:hover::after {
+    position: absolute;
+    color: #ffffff;
+    top: -40px;
+    font-size: .8em;
+    background: #346e7a;
+    padding: 5px;
+    border-radius: 5px;
+    content: '回最上層';
+    width: 70px;
+}
+
+#IG:hover::after {
+    content: 'Instagram';
+    margin-left: 15px;
+}
+
+#FB:hover::after {
+    content: 'Facebook';
+    margin-left: 15px;
+}
+
+#Line:hover::after {
+    content: 'Line';
+    margin-left: 15px;
+}
+
+#YT:hover::after {
+    content: 'outube';
+    margin-left: 15px;
+}
