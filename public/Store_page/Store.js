@@ -12,6 +12,16 @@ $(document).ready(function () {
         ['../imges/prd_image_8/55週年紀念拍 BRS-12 SE B(1).jpg'],
         ['../imges/prd_image_9/亮劍 BRS-12N(1).jpg'],
         ['../imges/prd_image_10/突擊TK-66 Q(1).png'],
+        ['../imges/shoes_image_1/P9200TTY A(1).jpg'],
+        ['../imges/shoes_image_2/R530LZJ C(1).jpg'],
+        ['../imges/shoes_image_3/S99ELITE A(1).jpg'],
+        ['../imges/shoes_image_4/A830IV B(1).jpg'],
+        ['../imges/shoes_image_5/A900F I(1).jpg'],
+        ['../imges/shoes_image_6/A970TD C(1).jpg'],
+        ['../imges/shoes_image_7/THUNDER+ A(1).jpg'],
+        ['../imges/shoes_image_8/A391 C(1).jpg'],
+        ['../imges/shoes_image_9/P8500II D(1).png'],
+        ['../imges/shoes_image_10/A780 F(1).png'],
     ];
 
     // 更換商品圖片效果
@@ -128,6 +138,8 @@ render()
 
 logout.addEventListener('click', function () {
     localStorage.removeItem('myUname')
+    localStorage.setItem('cart','[]')
+    addCart()
     render()
 })
 

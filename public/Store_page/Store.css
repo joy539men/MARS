@@ -1,6 +1,6 @@
 /* 導覽列 */
 header{
-    background-color: rgb(235, 228, 243) ;
+    background-color: rgba(235, 228, 243, 0.536) ;
 }
 #rightList {
     margin-left: 780px;
@@ -65,6 +65,7 @@ header{
 /* 商品列表 */
 .main {
     padding: 40px 20px 20px 0px ;
+    margin-top: 150px;
 }
 
 .container1{
