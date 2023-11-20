@@ -1,22 +1,25 @@
 /* 導覽列 */
-header{
-    background-color: rgba(235, 228, 243, 0.536) ;
+header {
+    background-color: rgba(235, 228, 243, 0.536);
 }
+
 #rightList {
     margin-left: 780px;
     padding-top: 75px;
 }
-#rightList div{
+
+#rightList div {
     display: inline-block;
     width: 110px;
 }
 
-#logoTop{
+#logoTop {
     float: left;
 }
+
 #logoTop>a>img {
-    
-  
+
+
     padding-left: 50px;
 }
 
@@ -64,61 +67,68 @@ header{
 
 /* 商品列表 */
 .main {
-    padding: 40px 20px 20px 0px ;
+    padding: 40px 20px 20px 0px;
     margin-top: 150px;
 }
 
-.container1{
-    width: 1200px;
+.category {
+    font-size: 25px;
+    text-align: center;
+}
+
+.container1 {
     margin: auto;
 }
 
-.container1 > ul {
-    width: 100%;
-    overflow: hidden;
-    padding-top: 10px;
+.container1>ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
 }
 
-.container1 > ul > li {
-    float: left;
-    width: calc(100% / 5 - 20px);
+.container1>ul>li {
+    width: 215px;
     border: 1px solid rgb(214, 199, 235);
-    margin: 0 10px 20px;
     height: 350px;
     box-shadow: 5px 5px 10px rgb(214, 199, 235);
     border-radius: 10px;
+    overflow: hidden;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
 }
 
-.container1 img{
+.container1 img {
     width: 100%;
     height: 100%;
-    display: block;
     padding-top: 10px;
 }
-.container1 p{
+
+.container1 p {
     padding-top: 5px;
     text-align: center;
     font-size: larger;
     height: 65px;
 }
 
-.container1 div{
+.container1 div {
     text-align: center;
     display: block;
     padding-top: 1px;
 }
 
-.container1 button{
-    margin: 20px 45px ;
+.container1 button {
+    margin: 20px 45px;
     border-radius: 10px;
     width: 100px;
 }
 
-footer{
+footer {
     background-color: rgb(235, 228, 243);
 }
 
