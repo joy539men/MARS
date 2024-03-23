@@ -1,6 +1,6 @@
 MARS.Store羽球購物商店
 
-使用JavaScript、HTML、CSS，以及使用jQuery和Bootstrap加速開發流程，製作了一個簡單的羽球球類介紹及商品購物網站。
+使用JavaScript、HTML、CSS，以及使用jQuery和Bootstrap開發，製作了一個簡單的靜態頁面羽球球類介紹及商品購物網站。
 
 主要功能實現 : 
 
